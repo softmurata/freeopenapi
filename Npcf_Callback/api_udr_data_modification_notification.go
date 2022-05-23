@@ -9,7 +9,7 @@ import (
 	"io/ioutil"
 
 	"github.com/free5gc/openapi"
-	mmodels "github.com/softmurata/freeopenapi/models"
+	"github.com/softmurata/freeopenapi/models"
 
 )
 
@@ -19,14 +19,14 @@ var (
 
 type UdrDataModificationNotificationApiService service
 
-func (a * UdrDataModificationNotificationApiService) NotifyServiceParamData(ctx context.Context, supi string, udrDataModificationNotification *mmodels.UdrDataModificationNotifyRequest) (mmodels.UdrDataModificationNotifyResponse, *http.Response, error) {
+func (a * UdrDataModificationNotificationApiService) NotifyServiceParamData(ctx context.Context, supi string, udrDataModificationNotification *models.UdrDataModificationNotifyRequest) (models.UdrDataModificationNotifyResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = strings.ToUpper("Post")
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  mmodels.UdrDataModificationNotifyResponse
+		localVarReturnValue  models.UdrDataModificationNotifyResponse
 	)
 
 	// create path and map variables

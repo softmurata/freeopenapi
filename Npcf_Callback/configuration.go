@@ -16,6 +16,7 @@ type Configuration struct {
 	httpClient    *http.Client
 }
 
+
 func NewConfiguration() *Configuration {
 	cfg := &Configuration{
 		basePath:      "https://example.com/npcf-callback/v1",
