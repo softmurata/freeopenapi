@@ -1,12 +1,15 @@
 package Npcf_Callback
 
 import (
+	"fmt"
 	"context"
 	"strings"
-
+	"net/http"
 	"net/url"
+	"io/ioutil"
 
 	"github.com/free5gc/openapi"
+	mmodels "github.com/softmurata/freeopenapi/models"
 
 )
 
