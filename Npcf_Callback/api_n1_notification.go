@@ -20,7 +20,7 @@ var (
 
 type N1NotificationApiService service
 
-func (a *N1NotificationApiService) NotifyN1Notification(ctx context.Context, supi string, n1NotificationRequest *models.N1NotificationRequest) (models.N1NotificationResponse, *http.Response, error) {
+func (a *N1NotificationApiService) NotifyN1Notification(ctx context.Context, supi string, n1NotificationRequest models.N1NotificationRequest) (models.N1NotificationResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod   = strings.ToUpper("Post")
 		localVarPostBody     interface{}
