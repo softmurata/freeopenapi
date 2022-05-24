@@ -1,7 +1,5 @@
 package models
 
-
-type RefToBinaryData struct {
+type ReftoBinaryData struct {
 	ContentId string `json:"contentId"`
 }
-

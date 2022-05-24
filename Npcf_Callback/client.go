@@ -15,6 +15,7 @@ type APIClient struct {
 
 	// API Services
 	UdrDataModificationNotificationApi *UdrDataModificationNotificationApiService
+	N1NotificationApi *N1NotificationApiService
 
 }
 
@@ -36,5 +37,6 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 
 	// API services
 	c.UdrDataModificationNotificationApi = (*UdrDataModificationNotificationApiService)(&c.common)
+	c.N1NotificationApi = (*N1NotificationApiService)(&c.common)
 	return c
 }

@@ -20,7 +20,7 @@ var (
 
 type UdrDataModificationNotificationApiService service
 
-func (a * UdrDataModificationNotificationApiService) NotifyServiceParamData(ctx context.Context, supi string, udrDataModificationNotification *models.UdrDataModificationNotifyRequest) (models.UdrDataModificationNotifyResponse, *http.Response, error) {
+func (a *UdrDataModificationNotificationApiService) NotifyServiceParamData(ctx context.Context, supi string, udrDataModificationNotification *models.UdrDataModificationNotifyRequest) (models.UdrDataModificationNotifyResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = strings.ToUpper("Post")
 		localVarPostBody     interface{}
