@@ -71,6 +71,8 @@ func (a *N1NotificationApiService) NotifyN1Notification(ctx context.Context, sup
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
+	fmt.Println(" n1 notification var body:", localVarBody)
+
 	apiError := openapi.GenericOpenAPIError{
 		RawBody:     localVarBody,
 		ErrorStatus: localVarHttpResponse.Status,
