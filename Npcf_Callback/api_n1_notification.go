@@ -170,7 +170,7 @@ func (a *N1NotificationApiService) NotifyN1Notification(ctx context.Context, sup
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHttpResponse, apiError
 	default:
-		return localVarHttpResponse, nil, nil
+		return localVarReturnValue, nil, nil
 
 	}
 
