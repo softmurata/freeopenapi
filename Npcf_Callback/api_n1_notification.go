@@ -10,7 +10,7 @@ import (
 	"net/url"
 
 	"github.com/free5gc/openapi"
-	omodels "github.com/free5gc/openapi/models"
+	// omodels "github.com/free5gc/openapi/models"
 	"github.com/softmurata/freeopenapi/models"
 )
 
@@ -82,7 +82,7 @@ func (a *N1NotificationApiService) NotifyN1Notification(ctx context.Context, sup
 	case 204:
 		return localVarReturnValue, localVarHttpResponse, nil
 	case 400:
-		var v omodels.ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -91,7 +91,7 @@ func (a *N1NotificationApiService) NotifyN1Notification(ctx context.Context, sup
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHttpResponse, apiError
 	case 401:
-		var v omodels.ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -100,7 +100,7 @@ func (a *N1NotificationApiService) NotifyN1Notification(ctx context.Context, sup
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHttpResponse, apiError
 	case 403:
-		var v omodels.ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -109,7 +109,7 @@ func (a *N1NotificationApiService) NotifyN1Notification(ctx context.Context, sup
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHttpResponse, apiError
 	case 404:
-		var v omodels.ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -118,7 +118,7 @@ func (a *N1NotificationApiService) NotifyN1Notification(ctx context.Context, sup
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHttpResponse, apiError
 	case 411:
-		var v omodels.ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -127,7 +127,7 @@ func (a *N1NotificationApiService) NotifyN1Notification(ctx context.Context, sup
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHttpResponse, apiError
 	case 413:
-		var v omodels.ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -136,7 +136,7 @@ func (a *N1NotificationApiService) NotifyN1Notification(ctx context.Context, sup
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHttpResponse, apiError
 	case 415:
-		var v omodels.ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -145,7 +145,7 @@ func (a *N1NotificationApiService) NotifyN1Notification(ctx context.Context, sup
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHttpResponse, apiError
 	case 429:
-		var v omodels.ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -154,7 +154,7 @@ func (a *N1NotificationApiService) NotifyN1Notification(ctx context.Context, sup
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHttpResponse, apiError
 	case 500:
-		var v omodels.ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -163,7 +163,7 @@ func (a *N1NotificationApiService) NotifyN1Notification(ctx context.Context, sup
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHttpResponse, apiError
 	case 503:
-		var v omodels.ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()

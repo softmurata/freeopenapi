@@ -9,6 +9,8 @@
 
 package Nnssf_NSSAIAvailability
 
+// Note: openapi/models library was diabled in this api component
+
 import (
 	"context"
 	"io/ioutil"
@@ -17,7 +19,8 @@ import (
 	"strings"
 
 	"github.com/free5gc/openapi"
-	. "github.com/free5gc/openapi/models"
+	// "github.com/free5gc/openapi/models"
+	"github.com/softmurata/freeopenapi/models"
 )
 
 // Linger please
@@ -34,14 +37,14 @@ SubscriptionsCollectionApiService Creates subscriptions for notification about u
 @return NssfEventSubscriptionCreatedData
 */
 
-func (a *SubscriptionsCollectionApiService) NSSAIAvailabilityPost(ctx context.Context, nssfEventSubscriptionCreateData NssfEventSubscriptionCreateData) (NssfEventSubscriptionCreatedData, *http.Response, error) {
+func (a *SubscriptionsCollectionApiService) NSSAIAvailabilityPost(ctx context.Context, nssfEventSubscriptionCreateData models.NssfEventSubscriptionCreateData) (models.NssfEventSubscriptionCreatedData, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = strings.ToUpper("Post")
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  NssfEventSubscriptionCreatedData
+		localVarReturnValue  models.NssfEventSubscriptionCreatedData
 	)
 
 	// create path and map variables
@@ -96,7 +99,7 @@ func (a *SubscriptionsCollectionApiService) NSSAIAvailabilityPost(ctx context.Co
 		}
 		return localVarReturnValue, localVarHTTPResponse, nil
 	case 400:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -105,7 +108,7 @@ func (a *SubscriptionsCollectionApiService) NSSAIAvailabilityPost(ctx context.Co
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, apiError
 	case 401:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -114,7 +117,7 @@ func (a *SubscriptionsCollectionApiService) NSSAIAvailabilityPost(ctx context.Co
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, apiError
 	case 403:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -123,7 +126,7 @@ func (a *SubscriptionsCollectionApiService) NSSAIAvailabilityPost(ctx context.Co
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, apiError
 	case 404:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -132,7 +135,7 @@ func (a *SubscriptionsCollectionApiService) NSSAIAvailabilityPost(ctx context.Co
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, apiError
 	case 411:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -141,7 +144,7 @@ func (a *SubscriptionsCollectionApiService) NSSAIAvailabilityPost(ctx context.Co
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, apiError
 	case 413:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -150,7 +153,7 @@ func (a *SubscriptionsCollectionApiService) NSSAIAvailabilityPost(ctx context.Co
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, apiError
 	case 415:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -159,7 +162,7 @@ func (a *SubscriptionsCollectionApiService) NSSAIAvailabilityPost(ctx context.Co
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, apiError
 	case 429:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -168,7 +171,7 @@ func (a *SubscriptionsCollectionApiService) NSSAIAvailabilityPost(ctx context.Co
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, apiError
 	case 500:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -177,7 +180,7 @@ func (a *SubscriptionsCollectionApiService) NSSAIAvailabilityPost(ctx context.Co
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, apiError
 	case 503:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()

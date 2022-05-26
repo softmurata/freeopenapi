@@ -18,7 +18,8 @@ import (
 	"strings"
 
 	"github.com/free5gc/openapi"
-	. "github.com/free5gc/openapi/models"
+	// "github.com/free5gc/openapi/models"
+	"github.com/softmurata/freeopenapi/models"
 )
 
 // Linger please
@@ -89,7 +90,7 @@ func (a *SubscriptionIDDocumentApiService) NSSAIAvailabilityUnsubscribe(ctx cont
 	case 204:
 		return localVarHTTPResponse, nil
 	case 400:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -98,7 +99,7 @@ func (a *SubscriptionIDDocumentApiService) NSSAIAvailabilityUnsubscribe(ctx cont
 		apiError.ErrorModel = v
 		return localVarHTTPResponse, apiError
 	case 401:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -107,7 +108,7 @@ func (a *SubscriptionIDDocumentApiService) NSSAIAvailabilityUnsubscribe(ctx cont
 		apiError.ErrorModel = v
 		return localVarHTTPResponse, apiError
 	case 404:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -116,7 +117,7 @@ func (a *SubscriptionIDDocumentApiService) NSSAIAvailabilityUnsubscribe(ctx cont
 		apiError.ErrorModel = v
 		return localVarHTTPResponse, apiError
 	case 429:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -125,7 +126,7 @@ func (a *SubscriptionIDDocumentApiService) NSSAIAvailabilityUnsubscribe(ctx cont
 		apiError.ErrorModel = v
 		return localVarHTTPResponse, apiError
 	case 500:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -134,7 +135,7 @@ func (a *SubscriptionIDDocumentApiService) NSSAIAvailabilityUnsubscribe(ctx cont
 		apiError.ErrorModel = v
 		return localVarHTTPResponse, apiError
 	case 503:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()

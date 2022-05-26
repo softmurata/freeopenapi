@@ -8,7 +8,8 @@ import (
 	"strings"
 
 	"github.com/free5gc/openapi"
-	. "github.com/free5gc/openapi/models"
+	// "github.com/free5gc/openapi/models"
+	"github.com/softmurata/freeopenapi/models"
 )
 
 // Linger please
@@ -25,14 +26,14 @@ NotificationApiService Notifies about update to PFD change
  * @param pfdChangeNotifications []PfdChangeNotification - Notifications about updates to PFDs
 */
 
-func (a *NotificationApiService) NotificationPost(ctx context.Context, notifyUri string, pfdChangeNotifications []PfdChangeNotification) ([]PfdChangeReport, *http.Response, error) {
+func (a *NotificationApiService) NotificationPost(ctx context.Context, notifyUri string, pfdChangeNotifications []models.PfdChangeNotification) ([]models.PfdChangeReport, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = strings.ToUpper("Post")
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  []PfdChangeReport
+		localVarReturnValue  []models.PfdChangeReport
 	)
 
 	// create path and map variables
@@ -87,7 +88,7 @@ func (a *NotificationApiService) NotificationPost(ctx context.Context, notifyUri
 	case 204:
 		return localVarReturnValue, localVarHTTPResponse, nil
 	case 400:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -96,7 +97,7 @@ func (a *NotificationApiService) NotificationPost(ctx context.Context, notifyUri
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, nil
 	case 401:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -105,7 +106,7 @@ func (a *NotificationApiService) NotificationPost(ctx context.Context, notifyUri
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, nil
 	case 403:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -114,7 +115,7 @@ func (a *NotificationApiService) NotificationPost(ctx context.Context, notifyUri
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, nil
 	case 404:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -123,7 +124,7 @@ func (a *NotificationApiService) NotificationPost(ctx context.Context, notifyUri
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, nil
 	case 411:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -132,7 +133,7 @@ func (a *NotificationApiService) NotificationPost(ctx context.Context, notifyUri
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, nil
 	case 413:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -141,7 +142,7 @@ func (a *NotificationApiService) NotificationPost(ctx context.Context, notifyUri
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, nil
 	case 415:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -150,7 +151,7 @@ func (a *NotificationApiService) NotificationPost(ctx context.Context, notifyUri
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, nil
 	case 429:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -159,7 +160,7 @@ func (a *NotificationApiService) NotificationPost(ctx context.Context, notifyUri
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, nil
 	case 500:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -168,7 +169,7 @@ func (a *NotificationApiService) NotificationPost(ctx context.Context, notifyUri
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, nil
 	case 503:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()

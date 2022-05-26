@@ -9,7 +9,7 @@ import (
 	"strings"
 
 	"github.com/free5gc/openapi"
-	omodels "github.com/free5gc/openapi/models"
+	// omodels "github.com/free5gc/openapi/models"
 	"github.com/softmurata/freeopenapi/models"
 )
 
@@ -76,7 +76,7 @@ func (a *SmPolicyControlNotifyUpdateApiService) UpdateSmPolicyControlNotify(ctx 
 	case 204:
 		return localVarReturnValue, localVarHTTPResponse, nil
 	case 400:
-		var v omodels.ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.error()
@@ -85,7 +85,7 @@ func (a *SmPolicyControlNotifyUpdateApiService) UpdateSmPolicyControlNotify(ctx 
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, apiError
 	case 401:
-		var v omodels.ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.error()
@@ -95,7 +95,7 @@ func (a *SmPolicyControlNotifyUpdateApiService) UpdateSmPolicyControlNotify(ctx 
 		return localVarReturnValue, localVarHTTPResponse, apiError
 
 	case 403:
-		var v omodels.ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.error()
@@ -105,7 +105,7 @@ func (a *SmPolicyControlNotifyUpdateApiService) UpdateSmPolicyControlNotify(ctx 
 		return localVarReturnValue, localVarHTTPResponse, apiError
 
 	case 404:
-		var v omodels.ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.error()
@@ -114,7 +114,7 @@ func (a *SmPolicyControlNotifyUpdateApiService) UpdateSmPolicyControlNotify(ctx 
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, apiError
 	case 411:
-		var v omodels.ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.error()
@@ -123,7 +123,7 @@ func (a *SmPolicyControlNotifyUpdateApiService) UpdateSmPolicyControlNotify(ctx 
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, apiError
 	case 413:
-		var v omodels.ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.error()
@@ -132,7 +132,7 @@ func (a *SmPolicyControlNotifyUpdateApiService) UpdateSmPolicyControlNotify(ctx 
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, apiError
 	case 415:
-		var v omodels.ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.error()
@@ -141,7 +141,7 @@ func (a *SmPolicyControlNotifyUpdateApiService) UpdateSmPolicyControlNotify(ctx 
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, apiError
 	case 429:
-		var v omodels.ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.error()
@@ -150,7 +150,7 @@ func (a *SmPolicyControlNotifyUpdateApiService) UpdateSmPolicyControlNotify(ctx 
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, apiError
 	case 500:
-		var v omodels.ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.error()
@@ -159,7 +159,7 @@ func (a *SmPolicyControlNotifyUpdateApiService) UpdateSmPolicyControlNotify(ctx 
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, apiError
 	case 503:
-		var v omodels.ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.error()

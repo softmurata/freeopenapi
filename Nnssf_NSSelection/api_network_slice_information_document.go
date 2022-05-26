@@ -19,8 +19,11 @@ import (
 	"github.com/antihax/optional"
 
 	"github.com/free5gc/openapi"
-	. "github.com/free5gc/openapi/models"
+	// "github.com/free5gc/openapi/models"
+	"github.com/softmurata/freeopenapi/models"
 )
+
+// Note: openapi/models library was diabled in this api component
 
 // Linger please
 var (
@@ -51,14 +54,14 @@ type NSSelectionGetParamOpts struct {
 	SupportedFeatures               optional.String
 }
 
-func (a *NetworkSliceInformationDocumentApiService) NSSelectionGet(ctx context.Context, nfType NfType, nfId string, localVarOptionals *NSSelectionGetParamOpts) (AuthorizedNetworkSliceInfo, *http.Response, error) {
+func (a *NetworkSliceInformationDocumentApiService) NSSelectionGet(ctx context.Context, nfType models.NfType, nfId string, localVarOptionals *NSSelectionGetParamOpts) (models.AuthorizedNetworkSliceInfo, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = strings.ToUpper("Get")
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  AuthorizedNetworkSliceInfo
+		localVarReturnValue  models.AuthorizedNetworkSliceInfo
 	)
 
 	// create path and map variables
@@ -128,7 +131,7 @@ func (a *NetworkSliceInformationDocumentApiService) NSSelectionGet(ctx context.C
 		}
 		return localVarReturnValue, localVarHTTPResponse, nil
 	case 400:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -137,7 +140,7 @@ func (a *NetworkSliceInformationDocumentApiService) NSSelectionGet(ctx context.C
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, apiError
 	case 401:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -146,7 +149,7 @@ func (a *NetworkSliceInformationDocumentApiService) NSSelectionGet(ctx context.C
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, apiError
 	case 403:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -155,7 +158,7 @@ func (a *NetworkSliceInformationDocumentApiService) NSSelectionGet(ctx context.C
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, apiError
 	case 404:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -166,7 +169,7 @@ func (a *NetworkSliceInformationDocumentApiService) NSSelectionGet(ctx context.C
 	case 406:
 		return localVarReturnValue, localVarHTTPResponse, nil
 	case 414:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -175,7 +178,7 @@ func (a *NetworkSliceInformationDocumentApiService) NSSelectionGet(ctx context.C
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, apiError
 	case 429:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -184,7 +187,7 @@ func (a *NetworkSliceInformationDocumentApiService) NSSelectionGet(ctx context.C
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, apiError
 	case 500:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
@@ -193,7 +196,7 @@ func (a *NetworkSliceInformationDocumentApiService) NSSelectionGet(ctx context.C
 		apiError.ErrorModel = v
 		return localVarReturnValue, localVarHTTPResponse, apiError
 	case 503:
-		var v ProblemDetails
+		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
 			apiError.ErrorStatus = err.Error()
