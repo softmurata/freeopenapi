@@ -30,6 +30,8 @@ const (
 	ServiceName_NAUSF_SORPROTECTION       ServiceName = "nausf-sorprotection"
 	ServiceName_NAUSF_UPUPROTECTION       ServiceName = "nausf-upuprotection"
 	ServiceName_NNEF_PFDMANAGEMENT        ServiceName = "nnef-pfdmanagement"
+	ServiceName_3GPP_AS_SESSION_WITH_QOS  ServiceName = "3gpp-as-session-with-qos"
+	ServiceName_3GPP_SERVICE_PARAMETER    ServiceName = "3gpp-service-parameter"
 	ServiceName_NPCF_AM_POLICY_CONTROL    ServiceName = "npcf-am-policy-control"
 	ServiceName_NPCF_SMPOLICYCONTROL      ServiceName = "npcf-smpolicycontrol"
 	ServiceName_NPCF_POLICYAUTHORIZATION  ServiceName = "npcf-policyauthorization"
