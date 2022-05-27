@@ -3,7 +3,8 @@ package Nsmf_PDUSession
 import (
 	"net/http"
 
-	"github.com/free5gc/openapi/models"
+	// "github.com/free5gc/openapi/models"
+	"github.com/softmurata/freeopenapi/models"
 )
 
 var (
