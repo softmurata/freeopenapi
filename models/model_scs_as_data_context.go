@@ -1,6 +1,6 @@
 package models
 
-type ScsAsdataContext struct {
+type ScsAsDataContext struct {
 	FlowInfos               []FlowInfo               `json:"flowInfos,omitempty" yaml:"flowInfos" bson:"flowInfos" mapstructure:"FlowInfos"`
 	NotificationDestination string                   `json:"notificationDestination" yaml:"notificationDestination" bson:"notificationDestination" mapstructure:"NotificationDestination"`
 	EthFlowInfos            []EthFlowInfo            `json:"ethFlowInfos,omitempty" yaml:"ethFlowInfos" bson:"ethFlowInfos" mapstructure:"EthFlowInfos"`
