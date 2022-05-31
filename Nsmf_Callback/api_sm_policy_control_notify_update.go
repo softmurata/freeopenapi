@@ -19,7 +19,7 @@ var (
 
 type SmPolicyControlNotifyUpdateApiService service
 
-func (a *SmPolicyControlNotifyUpdateApiService) UpdateSmPolicyControlNotify(ctx context.Context, smContextRef string, request *models.SmPolicyControlNotifyUpdateRequest) (models.SmPolicyControlNotifyUpdateResponse, *http.Response, error) {
+func (a *SmPolicyControlNotifyUpdateApiService) UpdateSmPolicyControlNotify(ctx context.Context, smPolicyId string, request *models.SmPolicyControlNotifyUpdateRequest) (models.SmPolicyControlNotifyUpdateResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = strings.ToUpper("Post")
 		localVarPostBody     interface{}
@@ -30,8 +30,8 @@ func (a *SmPolicyControlNotifyUpdateApiService) UpdateSmPolicyControlNotify(ctx 
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath() + "/{smContextRef}/sm-policy-control-notify/update"
-	localVarPath = strings.Replace(localVarPath, "{"+"smContextRef"+"}", fmt.Sprintf("%v", smContextRef), -1)
+	localVarPath := a.client.cfg.BasePath() + "/{smPolicyId}/sm-policy-control-notify/update"
+	localVarPath = strings.Replace(localVarPath, "{"+"smPolicyId"+"}", fmt.Sprintf("%v", smPolicyId), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
