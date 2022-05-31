@@ -17,8 +17,8 @@ type Configuration struct {
 
 func NewConfiguration() *Configuration {
 	cfg := &Configuration{
-		basePath:      "https://example.com/nsmf-callback/v1",
-		url:           "{apiRoot}/nsmf-callback/v1",
+		basePath:      "https://example.com/nsmf-callback",
+		url:           "{apiRoot}/nsmf-callback",
 		defaultHeader: make(map[string]string),
 		userAgent:     "OpenAPI-Generator/1.0.0/go",
 	}
