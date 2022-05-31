@@ -79,7 +79,7 @@ func (a *SmPolicyControlNotifyUpdateApiService) UpdateSmPolicyControlNotify(ctx 
 		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
-			apiError.ErrorStatus = err.error()
+			apiError.ErrorStatus = err.Error()
 			return localVarReturnValue, localVarHTTPResponse, apiError
 		}
 		apiError.ErrorModel = v
@@ -88,7 +88,7 @@ func (a *SmPolicyControlNotifyUpdateApiService) UpdateSmPolicyControlNotify(ctx 
 		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
-			apiError.ErrorStatus = err.error()
+			apiError.ErrorStatus = err.Error()
 			return localVarReturnValue, localVarHTTPResponse, apiError
 		}
 		apiError.ErrorModel = v
@@ -98,7 +98,7 @@ func (a *SmPolicyControlNotifyUpdateApiService) UpdateSmPolicyControlNotify(ctx 
 		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
-			apiError.ErrorStatus = err.error()
+			apiError.ErrorStatus = err.Error()
 			return localVarReturnValue, localVarHTTPResponse, apiError
 		}
 		apiError.ErrorModel = v
@@ -108,7 +108,7 @@ func (a *SmPolicyControlNotifyUpdateApiService) UpdateSmPolicyControlNotify(ctx 
 		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
-			apiError.ErrorStatus = err.error()
+			apiError.ErrorStatus = err.Error()
 			return localVarReturnValue, localVarHTTPResponse, apiError
 		}
 		apiError.ErrorModel = v
@@ -117,7 +117,7 @@ func (a *SmPolicyControlNotifyUpdateApiService) UpdateSmPolicyControlNotify(ctx 
 		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
-			apiError.ErrorStatus = err.error()
+			apiError.ErrorStatus = err.Error()
 			return localVarReturnValue, localVarHTTPResponse, apiError
 		}
 		apiError.ErrorModel = v
@@ -126,7 +126,7 @@ func (a *SmPolicyControlNotifyUpdateApiService) UpdateSmPolicyControlNotify(ctx 
 		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
-			apiError.ErrorStatus = err.error()
+			apiError.ErrorStatus = err.Error()
 			return localVarReturnValue, localVarHTTPResponse, apiError
 		}
 		apiError.ErrorModel = v
@@ -135,7 +135,7 @@ func (a *SmPolicyControlNotifyUpdateApiService) UpdateSmPolicyControlNotify(ctx 
 		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
-			apiError.ErrorStatus = err.error()
+			apiError.ErrorStatus = err.Error()
 			return localVarReturnValue, localVarHTTPResponse, apiError
 		}
 		apiError.ErrorModel = v
@@ -144,7 +144,7 @@ func (a *SmPolicyControlNotifyUpdateApiService) UpdateSmPolicyControlNotify(ctx 
 		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
-			apiError.ErrorStatus = err.error()
+			apiError.ErrorStatus = err.Error()
 			return localVarReturnValue, localVarHTTPResponse, apiError
 		}
 		apiError.ErrorModel = v
@@ -153,7 +153,7 @@ func (a *SmPolicyControlNotifyUpdateApiService) UpdateSmPolicyControlNotify(ctx 
 		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
-			apiError.ErrorStatus = err.error()
+			apiError.ErrorStatus = err.Error()
 			return localVarReturnValue, localVarHTTPResponse, apiError
 		}
 		apiError.ErrorModel = v
@@ -162,7 +162,7 @@ func (a *SmPolicyControlNotifyUpdateApiService) UpdateSmPolicyControlNotify(ctx 
 		var v models.ProblemDetails
 		err = openapi.Deserialize(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 		if err != nil {
-			apiError.ErrorStatus = err.error()
+			apiError.ErrorStatus = err.Error()
 			return localVarReturnValue, localVarHTTPResponse, apiError
 		}
 		apiError.ErrorModel = v
